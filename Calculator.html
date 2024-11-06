@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .content{
+            background-color: rgb(193, 193, 255);
+            width: 300px;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 8px;
+        }
+        .title{
+            font-size: 35px;
+            color: rgb(5, 32, 152);
+            text-align: center;
+            padding: 20px 20px;
+            font-weight: bold;
+        }
+        label{
+            display: block;
+            margin: 0px 20px;
+            margin-bottom: 5px;
+            margin-top: 20px;
+        }
+        .user-input{
+            padding: 10px 10px;
+            margin: 0px 20px;
+            width: 80%;
+            border: 1px solid greenyellow ;
+            border-radius: 5px;
+        }
+
+        .calculateBtn{
+            width: 89%;
+            text-align: center;
+            margin: 10px 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(100, 4, 190);
+            color: rgb(255, 255, 207);
+        }
+        .result{
+            text-align: end;
+            padding: 10px 10px;
+            margin: 0px 20px;
+            border-radius: 5px;
+            font-size: 25px;
+            background-color: rgb(224, 208, 239);
+            color: rgb(40, 40, 159);
+        }
+        .error{
+            color: rgb(228, 2, 2);
+            margin: 8px 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+
+        <div class="title">Claculator</div>
+
+         <div class="result" id="result">0</div>
+
+        <div class="input-group">
+            <label for="">Number One</label>
+            <input type="number" id="fNum" class="user-input" placeholder="Enter First Number...">
+            <small class="error" id="fNumError">Number One is required!</small>
+        </div>
+
+        <div class="input-group">
+            <label for="">Number Two</label>
+            <input type="number" id="sNum" class="user-input" placeholder="Enter Second Number...">
+            <small class="error" id="sNumError">Number Two is required!</small>
+        </div>
+
+        <div class="input-group">
+            <label for="">Operators :</label>
+             <select class="user-input" id="operation">
+                <option value="empty">Choose Options...</option>
+                <option value="add">+</option>
+                <option value="minus">-</option>
+                <option value="multiply">*</option>
+                <option value="division">/</option>
+            </select>
+            <small class="error" id="operaError">Operator is required!</small>
+        </div>
+
+        <div class="buttton-group">
+            <button type="button" class="calculateBtn" id="btnCal">Calculate</button>
+        </div>
+        
+    </div>
+    <script src="../Projects/Calculator.js"></script>
+</body>
+</html>
